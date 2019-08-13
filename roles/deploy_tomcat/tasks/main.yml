@@ -10,13 +10,13 @@
     state: started
     enabled: yes
 
-- name: create ansible tomcat directory
+- name: create ROOT tomcat directory
   file:
-    path: /usr/share/tomcat/webapps/ansible
+    path: /usr/share/tomcat/webapps/ROOT
     state: directory
 
-- name: copy static index.html to tomcat webapps/ansible/index.html
+- name: copy static index.html to tomcat webapps/ROOT/index.html
   template:
     src: index.html.j2
-    dest: /usr/share/tomcat/webapps/ansible/index.html
+    dest: /usr/share/tomcat/webapps/ROOT/index.html
     mode: 0644
