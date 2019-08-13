@@ -26,5 +26,5 @@ backend app-servers
     balance roundrobin
     option forwardfor
 {% for appsrv in groups.apps %}
-    server {{ appsrv }} {{ hostvars[appsrv].ansible_host }}:8080 cookie {{ appsrv }} check
+    server {{ appsrv }} {{ hostvars[appsrv].ansible_ssh_host }}:8080 cookie {{ appsrv }} check
 {% endfor %}
