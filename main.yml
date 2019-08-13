@@ -1,0 +1,33 @@
+---
+- hosts: all:!bastions
+  gather_facts: false
+  become: yes
+  roles:
+    - configure
+
+- hosts: frontends
+  gather_facts: false
+  roles:
+    - deploy_haproxy
+
+- hosts: apps
+  gather_facts: false
+  become: yes
+  roles:
+    - deploy_tomcat
+
+- hosts: apps
+  gather_facts: false
+  become: yes
+  roles:
+    - deploy_postgres
+
+- hosts: apps
+  gather_facts: false
+  become: yes
+  roles:
+    - deploy_apache
+  
+
+
+
