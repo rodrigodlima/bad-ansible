@@ -1,5 +1,5 @@
 [frontends]
-frontend1.e651.internal ansible_ssh_host=frontend1.e651.example.opentlc.com GUID=e651
+frontend1.e651.internal ansible_ssh_host=frontend1.e651.example.opentlc.com
 
 [apps]
 app1.e651.internal ansible_ssh_host=app1.e651.example.opentlc.com
